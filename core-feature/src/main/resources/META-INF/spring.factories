@@ -1,0 +1,5 @@
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  com.demo.exception.InvalidIFOFailureAnalyzer
+
+org.springframework.context.ApplicationListener=\
+  com.demo.listener.MyApplicationPreparedEventListener
