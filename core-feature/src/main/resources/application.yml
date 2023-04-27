@@ -5,3 +5,7 @@ spring:
     name: core-feature
   profiles:
     active: dev
+
+xxx:
+  info: this is info
+  version: 1.0

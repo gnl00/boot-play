@@ -1,5 +1,8 @@
 package com.demo;
 
+import com.demo.config.XXXConfig;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -10,4 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest
 public class CoreFeatureTest {
+
+    @Autowired
+    XXXConfig xxxConfig;
+
+    @Test
+    public void test() {
+        System.out.println(xxxConfig.getInfo());
+    }
+
 }
