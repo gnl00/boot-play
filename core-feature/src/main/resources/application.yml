@@ -2,9 +2,21 @@ server:
   port: 8080
 spring:
   application:
-    name: core-feature
+    name: boot-play-core-feature
   profiles:
     active: dev
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: debug
 
 xxx:
   info: this is info

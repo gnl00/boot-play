@@ -20,6 +20,6 @@ public class CoreFeatureMain {
 //        builder.sources(CoreFeatureMain.class);
 //        ApplicationContext ac = builder.run(args);
         System.out.println("Start date: " + ac.getStartupDate());
-        Arrays.stream(ac.getBeanDefinitionNames()).forEach(System.out::println);
+        // Arrays.stream(ac.getBeanDefinitionNames()).forEach(System.out::println);
     }
 }

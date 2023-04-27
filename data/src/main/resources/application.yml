@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: boot-play-data
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/db_test
