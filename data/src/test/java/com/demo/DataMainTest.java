@@ -1,9 +1,11 @@
 package com.demo;
 
+import com.demo.dao.TestRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.sql.SQLException;
 
 /**
  * TODO
@@ -15,9 +17,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class DataMainTest {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private TestRepository repository;
 
     @Test
-    public void test1() {}
+    public void test1() throws SQLException {
+        repository.testDS();
+    }
 
 }

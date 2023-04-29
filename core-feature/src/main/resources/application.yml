@@ -5,6 +5,8 @@ spring:
     name: boot-play-core-feature
   profiles:
     active: dev
+  main:
+    banner-mode:
 
 
 

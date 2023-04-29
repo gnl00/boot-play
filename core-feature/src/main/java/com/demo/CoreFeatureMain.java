@@ -3,6 +3,7 @@ package com.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.Arrays;
 
@@ -10,7 +11,8 @@ import java.util.Arrays;
 @SpringBootApplication
 public class CoreFeatureMain {
     public static void main(String[] args) {
-        ApplicationContext ac = SpringApplication.run(CoreFeatureMain.class, args);
+        ConfigurableApplicationContext ac = SpringApplication.run(CoreFeatureMain.class, args);
+        // ac.addApplicationListener();
 
 //        ApplicationListener myListener = new MyListener();
 //        SpringApplicationBuilder builder = new SpringApplicationBuilder();

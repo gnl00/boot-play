@@ -2,6 +2,34 @@ spring:
   application:
     name: boot-play-data
   datasource:
+    druid:
+      username: root
+      password:
+      url: jdbc:mysql://localhost:3306/db_test
+    hikari:
+      username: root
+      password:
+      jdbc-url: jdbc:mysql://localhost:3306/employees
+
+app:
+  ds1: # druid
     username: root
     password:
     url: jdbc:mysql://localhost:3306/db_test
+  ds2: # hikari
+    username: root
+    password:
+    jdbc-url: jdbc:mysql://localhost:3306/employees
+#
+#app:
+#  ds:
+#    first:
+#      username: root
+#      password:
+#      url: jdbc:mysql://localhost:3306/db_test
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#    second:
+#      username: root
+#      password:
+#      url: jdbc:mysql://localhost:3306/employees
+#      driver-class-name: com.mysql.cj.jdbc.Driver
