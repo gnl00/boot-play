@@ -3,10 +3,12 @@ package com.demo.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 
@@ -22,6 +24,7 @@ import javax.sql.DataSource;
 @Slf4j
 @Configuration
 public class DataMainConfig {
+
 //    @Bean
 //    public DataSource dataSource() {
 //        HikariDataSource ds = DataSourceBuilder.create()
@@ -47,5 +50,21 @@ public class DataMainConfig {
                 .type(HikariDataSource.class)
                 .build();
         return ds;
+    }
+
+    @Bean
+    @Qualifier("druidJdbcTemplate")
+    public JdbcTemplate druidJdbcTemplate() {
+        JdbcTemplate template = new JdbcTemplate();
+        template.setDataSource(druidDataSource());
+        return template;
+    }
+
+    @Bean
+    @Qualifier("hikariJdbcTemplate")
+    public JdbcTemplate hikariJdbcTemplate() {
+        JdbcTemplate template = new JdbcTemplate();
+        template.setDataSource(hikariDataSource());
+        return template;
     }
 }

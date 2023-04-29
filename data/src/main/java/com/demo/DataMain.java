@@ -12,6 +12,7 @@ import java.util.Arrays;
 // 多数据源配置需要排除 DataSourceAutoConfiguration
 // 因为 DataSourceAutoConfiguration 会优先进行单数据源配置
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+// @MapperScan(basePackages = {"com.demo.mapper"})
 public class DataMain {
     public static void main(String[] args) {
         ConfigurableApplicationContext ac = SpringApplication.run(DataMain.class, args);
